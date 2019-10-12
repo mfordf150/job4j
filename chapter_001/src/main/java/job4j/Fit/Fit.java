@@ -1,4 +1,4 @@
-package ru.job4j.Fit;
+package job4j.Fit;
 
 public class Fit {
 
