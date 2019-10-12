@@ -6,30 +6,31 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-public class DummyBotTest {
 
+public class DummyBotTest {
     @Test
     public void whenGreetBot() {
+        DummyBot bot = new DummyBot();
         assertThat(
-                DummyBot.answer("Привет, Бот."),
+                bot.answer("Привет, Бот."),
                 is("Привет, умник.")
         );
     }
 
     @Test
     public void whenByeBot() {
+        DummyBot bot = new DummyBot();
         assertThat(
-                DummyBot.answer("Пока."),
+                bot.answer("Пока."),
                 is("До скорой встречи.")
         );
     }
 
     @Test
     public void whenUnknownBot() {
+        DummyBot bot = new DummyBot();
         assertThat(
-                DummyBot.answer("Сколько будет 2 + 2?"),
-                is("Это ставит меня в тупик. Задайте другой вопрос.")
-        );
+                bot.answer("Сколько будет 2 + 2?"),
+                is("Это ставит меня в тупик. Задайте другой вопрос."));
     }
-
 }
