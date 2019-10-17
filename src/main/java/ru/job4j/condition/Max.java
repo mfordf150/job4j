@@ -6,10 +6,9 @@ public class Max {
 
     public static int max(int left, int right) {
 
-        int max;
 
-        max = left < 0 ? -right : right;
-        return max;
 
+        int result = left < right ? left : right;
+        return result < left ?result : right;
     }
 }
