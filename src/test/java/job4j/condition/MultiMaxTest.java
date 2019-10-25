@@ -1,13 +1,12 @@
 package job4j.condition;
 
+
 import org.junit.Test;
 
-import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
 
+import static sun.nio.cs.Surrogate.is;
 
-
-    public class MultiMaxTest {
+public class MultiMaxTest {
         @Test
         public void whenSecondMax() {
             MultiMax check = new MultiMax();
@@ -16,7 +15,10 @@ import static org.junit.Assert.assertThat;
 
         }
 
-        @Test
+    private void assertThat(int result, boolean b) {
+    }
+
+    @Test
         public void whenSecondMax2() {
             MultiMax check2 = new MultiMax();
             int result2 = check2.max(1, 4, 2);
@@ -38,4 +40,5 @@ import static org.junit.Assert.assertThat;
             int result3 = check4.max(1, 4, 2);
             assertThat(result3, is(4));
         }
+
 }
