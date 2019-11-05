@@ -1,8 +1,6 @@
-package ru.job4j.condition;
+package job4j;
 
-import job4j.condition.SqMax;
 import org.junit.Test;
-
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 

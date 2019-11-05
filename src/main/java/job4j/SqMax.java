@@ -1,6 +1,7 @@
-package job4j.condition;
+package job4j;
 
 public class SqMax {
+
 
     public static int max(int first, int second, int third, int forth) {
         int result = forth;
