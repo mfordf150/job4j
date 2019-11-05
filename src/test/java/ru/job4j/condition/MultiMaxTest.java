@@ -1,6 +1,7 @@
-package job4j.condition;
+package ru.job4j.condition;
 
 
+import job4j.condition.MultiMax;
 import org.junit.Test;
 
 
