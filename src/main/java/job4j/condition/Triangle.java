@@ -26,14 +26,9 @@ public class Triangle {
             System.out.println("Треугольник  не существует.");
             result2 = false;
         }
-
-
-
-
         return result2;
     }
 }
-
 
 
 

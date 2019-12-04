@@ -1,6 +1,5 @@
-package ru.job4j.condition;
+package job4j.condition;
 
-import job4j.condition.Max;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
