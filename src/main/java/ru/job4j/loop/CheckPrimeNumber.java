@@ -7,8 +7,10 @@ public class CheckPrimeNumber {
         if ((number % 5) == 0) {
 
         } else if ((number % 4) == 0) {
+
             return false;
         } else if ((number % 1) == 0) {
+
             return false;
         }
 
