@@ -13,16 +13,16 @@ public class FindLoopTest {
 
     @Test
     public void whenArrayHas5Then0() {
-        int input[] = {0,1,2,3,4,5};
+        int[] input = new int[]{5, 10, 3};
         int value = 5;
         int result = FindLoop.indexOf(input, value);
-        int expect = -1;
+        int expect = 0;
         assertThat(result, is(expect));
     }
 
     @Test
     public void whenArrayHas9Then0() {
-        int input[] = {0,1,2,3,4,5};
+        int input[] = {0, 1, 9, 2};
         int value = 9;
         int result = FindLoop.indexOf(input, value);
         int expect = -1;
