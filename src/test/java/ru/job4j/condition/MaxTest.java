@@ -13,4 +13,10 @@ public class MaxTest {
         int result = Max.max(1, 2);
         assertThat(result, is(2));
     }
+
+    private void assertThat(int result, Object o) {
+    }
+
+
+
 }
