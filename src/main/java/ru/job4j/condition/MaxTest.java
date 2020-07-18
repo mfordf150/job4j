@@ -1,4 +1,4 @@
-package job4j.condition;
+package ru.job4j.condition;
 
 import org.junit.Test;
 
