@@ -1,6 +1,6 @@
 package ru.job4j.array;
 
-import junit.framework.TestCase;
+
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.Matchers.is;
