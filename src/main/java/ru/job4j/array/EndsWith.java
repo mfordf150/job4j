@@ -6,7 +6,7 @@ public class EndsWith {
         boolean result = false;
         for (int index = 0; index < word.length; index++) {
 
-            if (post[post.length - 1 - index] == word[word.length - 1 - index] {
+            if (post[post.length - 1 - index] == word[word.length - 1 - index])  {
                 result = true;
             } else{
                 result = false;
