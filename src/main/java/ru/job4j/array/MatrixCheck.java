@@ -5,16 +5,18 @@ public class MatrixCheck {
 
     public static boolean monoHorizontal(char[][] board, int row) {
         boolean result = true;
-        for (int j = 0; j < board.length; j++) {
-            if (board[row][j] != 'X') {
-                result = false;
-                break;
+        for (int i = 0; i < board.length; i++) {
+            if (board[row][i] != 'X') {
+                result = monoHorizontal(board, i) || monoVertical(board, i);
+                if (result) {
+                    break;
+                }
             }
         }
         return result;
     }
 
-    public static char[] DiagonallyAcross(char[][] board) {
+    public static char[] diagonallyAcross(char[][] board) {
         char[] array = new char[board.length];
         for (int i = 0; i < board.length; i++) {
             array[i] = board[i][i];
@@ -25,10 +27,12 @@ public class MatrixCheck {
 
     public static boolean monoVertical(char[][] board, int row) {
         boolean result = true;
-        for (int i = 0; i < board.length; i++) {
-            if (board[i][row] != 'X') {
-                result = false;
-                break;
+        for (int j = 0; j < board.length; j++) {
+            if (board[j][row] != 'X') {
+                result = monoHorizontal(board, j) || monoVertical(board, j);
+                if (result) {
+                    break;
+                }
             }
         }
         return result;
@@ -37,16 +41,19 @@ public class MatrixCheck {
 
     public static boolean isWin(char[][] board) {
         boolean result = false;
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < board.length; i++) {
             if (board[i][i] == 'X') {
-                result = monoHorizontal(board, i);
-                if (!result) {
-                    result = monoVertical(board, i);
+                result = monoHorizontal(board, i) || monoVertical(board, i);
+                if (result) {
+                    break;
                 }
-            }
-        }
-        return result;
-    }
 
+            }
+
+        }
+
+        return result;
+
+    }
 
 }
