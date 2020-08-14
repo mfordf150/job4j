@@ -3,14 +3,14 @@ package ru.job4j.array;
 public class MatrixCheck {
 
 
+
+
     public static boolean monoHorizontal(char[][] board, int row) {
         boolean result = true;
         for (int i = 0; i < board.length; i++) {
             if (board[row][i] != 'X') {
-                result = monoHorizontal(board, i) || monoVertical(board, i);
-                if (result) {
-                    break;
-                }
+                result = false;
+                break;
             }
         }
         return result;
@@ -27,12 +27,10 @@ public class MatrixCheck {
 
     public static boolean monoVertical(char[][] board, int row) {
         boolean result = true;
-        for (int j = 0; j < board.length; j++) {
-            if (board[j][row] != 'X') {
-                result = monoHorizontal(board, j) || monoVertical(board, j);
-                if (result) {
-                    break;
-                }
+        for (int i = 0; i < board.length; i++) {
+            if (board[i][row] != 'X') {
+                result = false;
+                break;
             }
         }
         return result;
@@ -47,13 +45,10 @@ public class MatrixCheck {
                 if (result) {
                     break;
                 }
-
             }
-
         }
-
         return result;
-
     }
+
 
 }
