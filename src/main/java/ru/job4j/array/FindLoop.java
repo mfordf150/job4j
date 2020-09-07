@@ -12,7 +12,6 @@ public class FindLoop {
         }
         return rst;
     }
-
     public static int indexOf(int[] data, int el, int start, int finish) {
         int rst = -1;
         for (int index = start; index < finish; index++) {
@@ -23,8 +22,5 @@ public class FindLoop {
         }
         return rst;
     }
-
-
-
 }
 

@@ -12,8 +12,7 @@ public class CheckPrimeNumber {
             }
 
         }
-
-return rs1;
+        return rs1;
     }
-    }
+}
 
