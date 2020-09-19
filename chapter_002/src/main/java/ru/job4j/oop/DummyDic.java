@@ -4,7 +4,7 @@ public class DummyDic {
 
 
     public String engToRus(String eng) {
-        String say = "Неизвестное слово.";
+        String say = "Неизвестное слово." + eng;
         return say;
 
 
