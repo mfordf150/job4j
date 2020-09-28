@@ -8,11 +8,6 @@ public class Point {
     private double y;
     private double z;
 
-    /**Создадим конструктор класса Point для двух точек
-     *
-     * @param first x
-     * @param second y
-     */
     public Point(double first, double second) {
         this.x = first;
         this.y = second;
@@ -24,9 +19,6 @@ public class Point {
         this.y = second;
         this.z = third;
     }
-
-
-
     public double distance(Point that){
         return sqrt(pow(this.x - that.x, 2) + pow(this.y - that.y, 2));
     }

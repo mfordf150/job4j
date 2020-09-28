@@ -15,5 +15,6 @@ public class TriangleTest {
             Triangle tr = new Triangle(a, b, c);
             double result = tr.area(2.0, 8.0, 4.0, 5.0, 10.0, 8.0);
             assertThat(result, is(12.000000000000009));
+            
         }
     }
