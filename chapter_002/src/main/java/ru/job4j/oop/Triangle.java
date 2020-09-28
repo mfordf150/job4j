@@ -1,7 +1,6 @@
 package ru.job4j.oop;
 
 public class Triangle {
-
     public Point first;
     public Point second;
     public Point third;
