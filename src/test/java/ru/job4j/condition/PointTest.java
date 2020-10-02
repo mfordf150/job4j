@@ -5,7 +5,6 @@ import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 public class PointTest {
-
     @Test
     public void distance3d() {
         Point a = new Point(1, 1);

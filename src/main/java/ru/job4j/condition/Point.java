@@ -4,11 +4,9 @@ import static java.lang.StrictMath.*;
 
 
 public class Point {
-
     private int x;
     private int y;
     private int z;
-
     public Point(int first, int second) {
         this.x = first;
         this.y = second;
