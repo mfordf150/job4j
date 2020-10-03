@@ -9,13 +9,13 @@ public class Item {
     }
 
     public Item(int id) {
-        id = 1;
+        this.id = id;
 
     }
 
     public Item(int id, String name) {
-        id = 2;
-        name = "Jhon";
+        this.id = id;
+        this.name = name;
 
     }
 
