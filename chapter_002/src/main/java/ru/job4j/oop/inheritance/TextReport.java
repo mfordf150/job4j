@@ -5,20 +5,21 @@ public class TextReport {
         return name + System.lineSeparator() + body;
     }
 
-    public class ReportUsage {
+    public static class ReportUsage {
         public static void main(String[] args) {
-            TextReport report = new TextReport();
-            String text = report.generate("Report's name", "Report's body");
+            JSONReport report = new  JSONReport();
+            String text = report.generate("name" + ",","" +  "body");
             System.out.println(text);
         }
     }
 
-    public class HtmlReport extends TextReport {
+    public static class JSONReport extends TextReport {
         public String generate(String name, String body) {
-            return "<h1>" + name + "</h1>" +
-                    "<br/>" +
-                    "<span>" + body + "</span>";
+            return String.format("{\n name: %s \n body: %s \n}", name, body);
         }
     }
-}
+
+    }
+
+
 
