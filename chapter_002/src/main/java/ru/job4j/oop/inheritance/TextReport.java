@@ -14,9 +14,10 @@ public class TextReport {
         }
     }
 
-    @Override
+
     public static class HtmlReport extends TextReport {
 
+        @Override
         public String genreate(String name, String body) {
             return "<h1>" + name + "</h1>" +
                     "<br/>" +
@@ -24,8 +25,9 @@ public class TextReport {
         }
     }
 
-    @Override
+
     public static class JSONReport extends TextReport {
+        @Override
         public String generate(String name, String body) {
             return String.format("{\n name: %s \n body: %s \n}", name, body);
         }
