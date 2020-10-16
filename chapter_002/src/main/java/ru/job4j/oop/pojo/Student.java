@@ -4,6 +4,8 @@ public class Student {
     private String surname;
     private String name;
     private String patronymic;
+    private int group;
+    private int receiptDate;
 
     public int getGroup() {
         return group;
@@ -13,8 +15,7 @@ public class Student {
         this.group = group;
     }
 
-    private int group;
-    private int receipt_date;
+
 
     public String getSurname() {
         return surname;
@@ -40,11 +41,11 @@ public class Student {
         this.patronymic = patronymic;
     }
 
-    public int getReceipt_date() {
-        return receipt_date;
+    public int getreceiptDate() {
+        return receiptDate;
     }
 
-    public void setReceipt_date(int receipt_date) {
-        this.receipt_date = receipt_date;
+    public void setreceiptDate(int receipt_date) {
+        this.receiptDate = receiptDate;
     }
 }

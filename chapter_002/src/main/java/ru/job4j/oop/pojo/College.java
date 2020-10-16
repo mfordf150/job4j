@@ -7,9 +7,9 @@ public class College {
         student.setName("Иван");
         student.setPatronymic(" Иванович");
         student.setGroup(135);
-        student.setReceipt_date(2000);
+        student.setreceiptDate(2000);
 
-        System.out.println(" Студен: " + student.getSurname() + student.getName() + student.getPatronymic() + " группа - " + student.getGroup() + " дата поступления в " + student.getReceipt_date() + " году!");
+        System.out.println(" Студен: " + student.getSurname() + student.getName() + student.getPatronymic() + " группа - " + student.getGroup() + " дата поступления в " + student.getreceiptDate() + " году!");
 
     }
 }
