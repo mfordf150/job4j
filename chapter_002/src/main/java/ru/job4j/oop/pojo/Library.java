@@ -1,27 +1,33 @@
 package ru.job4j.oop.pojo;
-
+//Для переставления элементов в массиве просто используйте temp перемееную.
+// И третий элемент в массиве имеет индекс 2 - нужно это учитывать.
 public class Library {
-    private String name;
-    private  int page;
+    public static void main(String[] args) {
+        Book cleanCode = new Book("Clean Code", 464);
+        Book refactoring = new Book("Refactoring", 448);
+        Book adaptiveCode = new Book("Adaptive Code", 449);
+        Book cleanArchitecture = new Book("Clean Architecture", 352);
+        Book[] books = new Book[4];
+        books[0] = cleanCode;
+        books[1] = refactoring;
+        books[2] = adaptiveCode;
+        books[3] = cleanArchitecture;
+        for (int index = 0; index < books.length; index++) {
+            Book bk = books[index];
+            System.out.println(bk.getPage() + " - " + bk.getPage());
+        }
 
-    public Library(String name, int page) {
-        this.name = name;
-        this.page = page;
-    }
 
-    public String getName() {
-        return name;
-    }
+        Book temp = books[0];
+        books[0] = books[2];
+        books[2] = temp;
+        for (int index = 3; index < books.length; index++) {
+            System.out.println("Replace index[0] to index[3]");
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    public int getPage() {
-        return page;
-    }
+        }
+        System.out.println();
 
-    public void setPage(int page) {
-        this.page = page;
     }
 }
+
