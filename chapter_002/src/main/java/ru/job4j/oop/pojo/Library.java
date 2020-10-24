@@ -14,20 +14,18 @@ public class Library {
         books[3] = cleanArchitecture;
         for (int index = 0; index < books.length; index++) {
             Book bk = books[index];
-            System.out.println(bk.getPage() + " - " + bk.getPage());
+            System.out.println(bk.getName() + " - " + bk.getPage());
         }
+        System.out.println();
 
 
         Book temp = books[0];
         books[0] = books[2];
         books[2] = temp;
-        for (int index = 3; index < books.length; index++) {
-            System.out.println("Replace index[0] to index[3]");
-
-
+        for (int index = 0; index < books.length; index++) {
+            Book bk = books[index];
+            System.out.println(bk.getName() + " - " + bk.getPage());
         }
-        System.out.println();
-
     }
 }
 
