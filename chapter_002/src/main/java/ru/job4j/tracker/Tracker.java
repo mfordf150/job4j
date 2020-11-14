@@ -2,6 +2,7 @@ package ru.job4j.tracker;
 
 import java.util.Arrays;
 
+
 public class Tracker {
 
     private final Item[] items = new Item[100];
@@ -16,27 +17,44 @@ public class Tracker {
  Это нужно сделать через метод setId.
 
  */
+   
     public Item add(Item item) {
         item.setId(ids++);
-        items[size++] = item;
+        this.items[size++] = item;
         return item;
     }
 
+
+
     public Item[] findAll() {
-        Item[] items = new Item[100];
-        int size = 0;
-        for (int index = 0; index < items.length ; index++) {
-            Item item = items[index];
-            if(item != null) {
-        }
-            else {index--;
+        return Arrays.copyOf(this.items,size++);
+    }
+
+
+    public Item[] findByName(String key) {
+        Item[] rsl = new Item[this.size];
+        int sz = 0;
+        for (int index = 0; index != this.size; index++) {
+            if(this.items[index].getName().equals(key)) {
+                rsl[sz++] = this.items[index];
             }
+
         }
-        return Arrays.copyOf(items, size++);
+        return Arrays.copyOf(rsl,sz);
+
+    }
+        public Item findById(int id) {
+            Item rsl = null;
+            for (int index = 0; index < size; index++) {
+                Item item = items[index];
+                if (item.getId() == id) {
+                    rsl = item;
+                    break;
+                }
+            }
+            return rsl;
+        }
     }
 
 
-
-
-    }
    
