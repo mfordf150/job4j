@@ -17,7 +17,6 @@ public class Tracker {
  Это нужно сделать через метод setId.
 
  */
-   
     public Item add(Item item) {
         item.setId(ids++);
         this.items[size++] = item;
